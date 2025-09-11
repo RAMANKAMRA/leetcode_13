@@ -8,7 +8,7 @@ class Solution {
             else
                 arr[i] = left++;
         }
-        arr[n] = right;
+        arr[n] = left;
         return arr;
     }
 }
