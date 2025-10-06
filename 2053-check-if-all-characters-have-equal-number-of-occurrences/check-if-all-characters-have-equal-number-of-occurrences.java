@@ -8,9 +8,9 @@ class Solution {
         }
 
       
-        HashSet<Integer> freqSet = new HashSet<>(mp.values());
+        HashSet<Integer> set = new HashSet<>(mp.values());
 
       
-        return freqSet.size() == 1;
+        return set.size() == 1;
     }
 }
