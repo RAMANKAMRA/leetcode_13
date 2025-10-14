@@ -4,12 +4,12 @@ class Solution {
         int pi=0;
         int ni=1;
         int[]ans=new int[n];
-        for(int ele:nums){
-            if(ele>0){
-                ans[pi]=ele;
+        for(int num:nums){
+            if(num>0){
+                ans[pi]=num;
                 pi+=2;
-            }else{
-                ans[ni]=ele;
+            }else if(num<0){
+                ans[ni]=num;
                 ni+=2;
             }
         }
