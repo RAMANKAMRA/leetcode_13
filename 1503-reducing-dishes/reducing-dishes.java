@@ -9,6 +9,7 @@ class Solution {
             totalsum+=currsum;
         }
         return totalsum;
+
         
     }
 }
