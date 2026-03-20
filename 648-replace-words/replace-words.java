@@ -10,6 +10,7 @@ class Solution {
                 if(st.contains(pre)){
                     words[i]=pre;
                     break;
+                
 
                 }
             }
