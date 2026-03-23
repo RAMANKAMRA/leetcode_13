@@ -18,6 +18,7 @@ class Solution {
             }
         } 
         return rotated;
+    
     }
     private boolean isequal(int[][]a,int[][]b){
         int n=a.length;
@@ -25,13 +26,15 @@ class Solution {
             for(int j=0;j<n;j++){
                 if(a[i][j]!=b[i][j]){
                     return false;
+                
                 }
             }
         }
         return true;
+    
 
 
     }
 
     
-}
+} 
