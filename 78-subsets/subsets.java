@@ -1,22 +1,18 @@
-import java.util.*;
-
 class Solution {
-
-    void func(int ind, int[] nums, List<Integer> curr, List<List<Integer>> result) {
-        if (ind == nums.length) {
-            result.add(new ArrayList<>(curr));
-            return;
-        }
-        curr.add(nums[ind]);
-        func(ind + 1, nums, curr, result);
-
-        curr.remove(curr.size() - 1);
-        func(ind + 1, nums, curr, result);
-    }
-
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        func(0, nums, new ArrayList<>(), result);
-        return result;
+        List<List<Integer>>ans=new ArrayList<>();
+        List<Integer>temp=new ArrayList<>();
+        backtrack(nums,0,temp,ans);
+        return ans;
+
+        
+    }
+    public void backtrack(int[]nums,int idx,List<Integer>temp,List<List<Integer>>ans){
+        ans.add(new ArrayList<>(temp));
+        for(int i=idx;i<nums.length;i++){
+            temp.add(nums[i]);
+            backtrack(nums,i+1,temp,ans);
+            temp.remove(temp.size()-1);
+        }
     }
 }
