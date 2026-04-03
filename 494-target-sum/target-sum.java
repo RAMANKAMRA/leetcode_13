@@ -8,8 +8,8 @@ class Solution {
       if(target==0)return 1;
       return 0;
         }
-      int add=solve(nums,i+1,target+nums[i]);
-      int sub=solve(nums,i+1,target-nums[i]);
+      int add=solve(nums,i+1,target-nums[i]);
+      int sub=solve(nums,i+1,target+nums[i]);
       return add+sub;
 
     }
