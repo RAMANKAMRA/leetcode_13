@@ -3,14 +3,17 @@ class Solution {
         String[]nodes=preorder.split(",");
         int slots=1;
         for(String node:nodes){
-            if(slots==0)return false;
-            if(node.equals("#")){
-                slots--;
-            }else{
-                slots=slots-1+2;
-            }
+           if(slots==0)return false;
+           if(node.equals("#")){
+            slots--;
+
+           }else{
+            slots=slots-1+2;
+           }
+          
         }
-        return slots==0;
+         return slots==0;
         
+    
     }
 }
