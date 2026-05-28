@@ -6,7 +6,7 @@ class Solution {
         return solve(n-1,nums,dp);
         
     }
-    public int solve(int i,int[]nums,int[]dp ){
+    public int solve(int i,int[]nums,int []dp){
         if(i<0)return 0;
         if(i==0)return nums[0];
         if(dp[i]!=-1)return dp[i];
@@ -14,4 +14,5 @@ class Solution {
         int notpick=0+solve(i-1,nums,dp);
         return dp[i]=Math.max(pick,notpick);
     }
+
 }
