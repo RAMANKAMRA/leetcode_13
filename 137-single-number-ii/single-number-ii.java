@@ -1,4 +1,5 @@
 class Solution {
+
     public int singleNumber(int[] nums) {
         HashMap<Integer,Integer>mp=new HashMap<>();
         for(int num:nums){
@@ -8,6 +9,5 @@ class Solution {
             if(mp.get(key)==1)return key;
         }
         return -1;
-        
     }
 }
