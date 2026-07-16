@@ -21,13 +21,16 @@ class Solution {
 
     public boolean isValidate(TreeNode root, long min, long max) {
 
-        if (root == null)
-            return true;
+       
 
         if (root.val <= min || root.val >= max)
             return false;
+            boolean left=true;
+            boolean right=true;
+            if(root.left!=null)left=isValidate(root.left, min, root.val);
+            if(root.right!=null)right=isValidate(root.right, root.val, max);
 
-        return isValidate(root.left, min, root.val)
-            && isValidate(root.right, root.val, max);
+        return left&&right;
+            
     }
 }
