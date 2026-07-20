@@ -23,7 +23,7 @@ class Solution {
             int size=q.size();
             for(int i=0;i<size;i++){
                 TreeNode curr=q.poll();
-                if(i==size-1)ans.add(curr.val);
+               if(i==size-1)ans.add(curr.val);
                 if(curr.left!=null){
                     q.offer(curr.left);
                 }
