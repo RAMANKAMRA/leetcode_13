@@ -2,7 +2,7 @@ class Solution {
     public String reverseVowels(String s) {
         char[]arr=s.toCharArray();
         int left=0;
-        int right=arr.length-1;
+        int right=s.length()-1;
         while(left<right){
             while(left<right&&!isVowel(arr[left])){
                 left++;
@@ -18,16 +18,17 @@ class Solution {
 
 
         }
+    
         return new String(arr);
         
     }
-        private boolean isVowel(char ch) {
-
+    private boolean isVowel(char ch){
+        
         ch = Character.toLowerCase(ch);
 
         return ch == 'a' || ch == 'e' || ch == 'i'
                 || ch == 'o' || ch == 'u';
     
+    }
 
-}
 }
