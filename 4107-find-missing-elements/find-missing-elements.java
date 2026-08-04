@@ -9,7 +9,7 @@ class Solution {
             set.add(num);
         }
         List<Integer>ans=new ArrayList<>();
-        for(int i=min+1;i<max;i++){
+        for(int i=min;i<=max;i++){
             if(!set.contains(i)){
                 ans.add(i);
             }
